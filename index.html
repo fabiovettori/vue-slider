@@ -22,14 +22,15 @@
                 <!-- Vue container -->
                 <div id="root">
                     <div class="slider-container">
-                        <div class="prev">
+                        <div @click="prev()" class="prev">
                             <span class="fas fa-chevron-left"></span>
                         </div>
 
-                        <div class="img">
+                        <div class="immages">
+                            <img :src="img_slider[index_slider]" alt="Nike Blazer Low">
                         </div>
 
-                        <div class="next">
+                        <div @click="next()" class="next">
                             <span class="fas fa-chevron-right"></span>
                         </div>
                     </div>
