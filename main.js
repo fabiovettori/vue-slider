@@ -24,6 +24,10 @@ var app = new Vue({
             else {
                 this.index_slider = this.img_slider.length - 1;
             }
+        },
+
+        mark: function (i) {
+            this.index_slider = i;
         }
     }
 });

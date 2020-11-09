@@ -35,7 +35,7 @@
                         </div>
 
                         <div class="markers">
-                            <div v-for="(img, i) in img_slider" :class="i == index_slider ? 'active': 'null'" class="marker"></div>
+                            <div @click="mark(i)" v-for="(img, i) in img_slider" :class="i == index_slider ? 'active': 'null'" class="marker"></div>
                         </div>
                     </div>
                 </div>
