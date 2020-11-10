@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+#root {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+}
+
 section {
     height: 100vh;
     display: flex;
@@ -26,13 +31,15 @@ section {
     align-items: center;
 }
 
-.immages {
+.images {
     width: calc(100% - 100px);
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 4px 0px, rgba(0, 0, 0, 0.08) 0px 8px 16px 0px;
 }
 
 .next, .prev {
     font-size: 30px;
-    opacity: .5;
+    opacity: .2;
     transition: opacity .5s ease;
     cursor: pointer;
 }
@@ -42,7 +49,7 @@ section {
     opacity: 1;
 }
 
-.immages img {
+.images img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -67,4 +74,96 @@ section {
 
 .marker.active {
     background-color: grey;
+}
+
+.cart, .whish, .share {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease;
+    background-color: rgba(33, 61, 74, 0.12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.whish, .share {
+    transition: all .3s .3s ease;
+}
+
+.cart {
+    top: 0px;
+    left: 0px;
+}
+
+.whish {
+    top: -50px;
+    left: -50px;
+}
+
+.share {
+    top: -50px;
+    left: -50px;
+}
+
+.slider-container:hover .cart {
+    top: -50px;
+    left: -50px;
+    opacity: 1;
+}
+
+.slider-container:hover .whish {
+    top: -80px;
+    left: 0px;
+    opacity: 1;
+}
+
+.slider-container:hover .share {
+    top: 0px;
+    left: -80px;
+    opacity: 1;
+}
+
+.far {
+    font-size: 22px;
+}
+
+.description h1 {
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.description h2 {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.description p {
+    width: 600px;
+    line-height: 24px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.description a {
+    text-decoration: none;
+    text-transform: capitalize;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all .3s ease;
+}
+
+.description a:hover {
+    background-color: rgba(33, 61, 74, 0.15);
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 4px 0px, rgba(0, 0, 0, 0.08) 0px 8px 16px 0px;
 }
