@@ -10,6 +10,7 @@ var app = new Vue({
 
     created: function() {
         this.auto();
+        this.timer();
     },
 
     methods: {
@@ -35,7 +36,21 @@ var app = new Vue({
         },
 
         auto: function () {
-            setInterval(this.next, 3000)
+            setInterval(this.next, 3000);
+        },
+
+        timer: function () {
+            let timer = 0;
+            setInterval(function(){
+                timer += 1;
+
+                if (timer == 3) {
+                    timer = 0;
+                }
+
+                console.log(timer);
+                return timer;
+            }, 1000)
         }
     }
 });
