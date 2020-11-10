@@ -21,7 +21,7 @@
 
                 <!-- Vue container -->
                 <div id="root">
-                    <div class="slider-container">
+                    <div @mouseleave="playerSlider()" @mouseenter="stopSlider()" class="slider-container">
                         <div @click="prev()" class="prev">
                             <span class="fas fa-chevron-left"></span>
                         </div>
